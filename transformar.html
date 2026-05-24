@@ -1,49 +1,108 @@
 <!DOCTYPE html>
+<!-- Indica que el documento está realizado en HTML5 -->
+
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <!-- Permite mostrar caracteres especiales -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Hace que la página sea responsive -->
     <title>Transformación - Agro Intelligence</title>
+    <!-- Nombre de la pestaña -->
+    <!-- Conexión con Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
+
+<!-- Fondo claro -->
 <body class="bg-light">
 
+    <!-- Contenedor principal -->
     <div class="d-flex">
+
+        <!-- Menú lateral -->
         <div class="bg-dark text-white p-3 vh-100 shadow" style="width: 260px; position: fixed;">
+
+            <!-- Nombre del sistema -->
             <h4 class="text-success fw-bold mb-4 px-2">AGRO INT.</h4>
+
+            <!-- Lista del menú -->
             <ul class="nav flex-column gap-2">
+                <!-- Opciones del menú -->
                 <li class="nav-item"><a href="dashboard.html" class="nav-link text-white opacity-75">Inicio (Dashboard)</a></li>
                 <li class="nav-item"><a href="centralizar.html" class="nav-link text-white opacity-75">Centralizar Datos</a></li>
+                <!-- Opción activa -->
                 <li class="nav-item"><a href="transformar.html" class="nav-link text-white active bg-success rounded shadow-sm">Transformar Datos</a></li>
                 <li class="nav-item"><a href="analisis.html" class="nav-link text-white opacity-75">Análisis y Reportes</a></li>
-                <li class="nav-item mt-5"><a href="index.html" class="nav-link text-danger">Cerrar Sesión</a></li>
                 <li class="nav-item"><a href="video.html" class="nav-link text-white opacity-75">Video Presentación</a></li>
+                <!-- Botón cerrar sesión -->
+                <li class="nav-item mt-5"><a href="index.html" class="nav-link text-danger">Cerrar Sesión</a></li>
             </ul>
         </div>
 
+        <!-- Contenido principal -->
         <div class="p-4 w-100" style="margin-left: 260px;">
-            <h2 class="fw-bold text-secondary mb-2">Transformación: Limpieza y Estructuración de Datos</h2>
-            <p class="text-muted small">Archivo: <strong>produccion_mayo.csv</strong> / Estado: Carga Completada. Iniciando Validación.</p>
+
+            <!-- Título principal -->
+            <h2 class="fw-bold text-secondary mb-2">
+                Transformación: Limpieza y Estructuración de Datos
+            </h2>
+
+            <!-- Información del archivo -->
+            <p class="text-muted small">
+                Archivo: <strong>produccion_mayo.csv</strong> / Estado: Carga Completada. Iniciando Validación.
+            </p>
             
+            <!-- Barra de progreso -->
             <div class="mb-4">
-                <label class="small text-muted mb-1">Progreso de Procesamiento:</label>
+
+                <label class="small text-muted mb-1">
+                    Progreso de Procesamiento:
+                </label>
+
                 <div class="progress" style="height: 12px;">
+
+                    <!-- Porcentaje del progreso -->
                     <div class="progress-bar bg-success" style="width: 75%"></div>
+
                 </div>
             </div>
 
+            <!-- Tarjeta de validaciones -->
             <div class="card p-3 border-0 shadow-sm mb-4">
-                <h5 class="fw-bold mb-3 text-secondary">Validación y Corrección Automática</h5>
+
+                <h5 class="fw-bold mb-3 text-secondary">
+                    Validación y Corrección Automática
+                </h5>
+
+                <!-- Lista de validaciones -->
                 <ul class="list-unstyled mb-0 text-muted small">
-                    <li class="mb-2">✓ Formato de fechas unificado.</li>
-                    <li class="mb-2">⚠ 3 registros con valores vacíos corregidos automáticamente.</li>
-                    <li>✓ Conversión de unidades realizada (Libras a Kilogramos).</li>
+
+                    <li class="mb-2">
+                        ✓ Formato de fechas unificado.
+                    </li>
+
+                    <li class="mb-2">
+                        ⚠ 3 registros con valores vacíos corregidos automáticamente.
+                    </li>
+
+                    <li>
+                        ✓ Conversión de unidades realizada (Libras a Kilogramos).
+                    </li>
+
                 </ul>
             </div>
 
-            <h6 class="fw-bold text-secondary mb-2">Vista previa de los datos transformados:</h6>
+            <!-- Título de la tabla -->
+            <h6 class="fw-bold text-secondary mb-2">
+                Vista previa de los datos transformados:
+            </h6>
+
+            <!-- Tabla responsive -->
             <div class="table-responsive bg-white rounded shadow-sm">
+
                 <table class="table table-hover mb-0 text-center small">
+
+                    <!-- Encabezado -->
                     <thead class="table-light">
                         <tr>
                             <th>Fecha</th>
@@ -53,16 +112,23 @@
                             <th>Valor Calculado</th>
                         </tr>
                     </thead>
+
+                    <!-- Datos de ejemplo -->
                     <tbody>
                         <tr><td>19/09/2023</td><td>Predio 1</td><td>Elovida</td><td>Concepto</td><td>$350.00</td></tr>
                         <tr><td>26/09/2023</td><td>Lote B-2</td><td>Morrado</td><td>Kilogramos</td><td>$4,200.00</td></tr>
                         <tr><td>22/09/2023</td><td>Lote B-3</td><td>Morrado</td><td>Kilogramos</td><td>$4,200.00</td></tr>
                     </tbody>
+
                 </table>
             </div>
 
+            <!-- Botón para continuar -->
             <div class="text-center mt-4">
-                <a href="analisis.html" class="btn btn-secondary btn-lg px-4 shadow-sm">Ejecutar Transformación y Guardar</a>
+                <a href="analisis.html" class="btn btn-secondary btn-lg px-4 shadow-sm">
+                    Ejecutar Transformación y Guardar
+                </a>
+
             </div>
         </div>
     </div>
